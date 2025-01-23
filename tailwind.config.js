@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Укажи папки с кодом
+    './src/**/*.{js,jsx,ts,tsx}', // Укажите пути к вашим компонентам
   ],
   theme: {
-    extend: {}, // Для добавления кастомных стилей
+    extend: {},
   },
-  plugins: [], // Можно подключить плагины Tailwind
+  plugins: [],
 };
