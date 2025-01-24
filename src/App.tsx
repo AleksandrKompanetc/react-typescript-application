@@ -3,8 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      NEW APP
+    <div className="container mx-auto max-w-2xl pt-5 color-blue">
+      Content
     </div>
   );
 }

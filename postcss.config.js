@@ -1,6 +1,6 @@
 module.exports = {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+    tailwindcss: {}, // Обязательно подключите плагин для Tailwind
+    autoprefixer: {}, // Для автопрефиксов
   },
-};
+}
