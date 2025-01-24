@@ -1,19 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ES6",                            // Целевая версия JavaScript
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],   // Поддерживаемые библиотеки
-    "allowJs": true,                            // Разрешить использование .js файлов
-    "skipLibCheck": true,                       // Пропуск проверки типов в библиотеках
-    "esModuleInterop": true,                    // Совместимость с модулями ES6
-    "allowSyntheticDefaultImports": true,       // Импортировать модули по умолчанию
-    "strict": true,                             // Включение строгого режима TypeScript
-    "forceConsistentCasingInFileNames": true,   // Регистр в названиях файлов
-    "module": "ESNext",                         // Система модулей
-    "moduleResolution": "Node",                // Разрешение модулей в стиле Node.js
-    "resolveJsonModule": true,                  // Поддержка импорта JSON-файлов
-    "isolatedModules": true,                    // Поддержка изолированных модулей (React)
-    "jsx": "react-jsx"                          // Поддержка JSX (React 17+)
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "include": ["src"],                           // Включение файлов для компиляции
-  "exclude": ["node_modules", "build"]          // Исключение из компиляции
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
