@@ -9,32 +9,32 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  try {
-    async function fetchProducts() {
+  async function fetchProducts() {
+    try {
+      setError('')
       setLoading(true)
       const response = await axios.get<Iproduct[]>('https://fakestoreapi.com/products?limit=8')
       setProducts(response.data)
       setLoading(false)
+    } catch (e: unknown) {
+      const error = e as AxiosError
+      setLoading(false)
+      setError(error.message)
     }
-  } catch(e: unknown) {
-    const error = e as AxiosError
-    setLoading(false)
-    setError(error.message)
+
+    useEffect(() => {
+      fetchProducts()
+    }, [])
+
+    return (
+      <div className='container'>
+        {loading && <p>Loading...</p>}
+        {error && <p style={{color: 'red'}}>{error}</p>}
+        {products.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
+      </div>
+    )
   }
 
-  useEffect(() => {
-    fetchProducts()
-  }, [])
-
-  return (
-    <div className='container'>
-      {loading && <p>Loading...</p>}
-
-      {products.map((product) => (
-        <Product key={product.id} product={product} />
-      ))}
-    </div>
-  )
-}
-
-export default App
+}  export default App
