@@ -6,6 +6,7 @@ import axios from 'axios'
 
 function App() {
   const [products, setProducts] = useState<IProduct[]>([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     async function fetchProducts() {
