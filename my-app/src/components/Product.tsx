@@ -22,10 +22,13 @@ export function Product({product}: ProductProps) {
         onClick={toggleClick} 
         className={details ? 'product-button active' : 'product-button'}
       >
-        {details ? 'Close Details' : 'Show Details'}
+        {details ? 'Hide Details' : 'Show Details'}
       </button>
 
-      {details ? <p>{product.description}</p> : null}
+      {details && <div>
+        <p>{product.description}</p>
+        <p>Rate: <span style={{fontWeight: 'bold'}}>{product.rating.rate}</span></p>
+        </div>}
     </div>
   )
 }
