@@ -1,5 +1,8 @@
 export function CreateProduct() {
   return (
-    <form action=""></form>
+    <form action="">
+      <input type="text" />
+      <button></button>
+    </form>
   )
 }
