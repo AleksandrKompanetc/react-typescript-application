@@ -19,11 +19,11 @@ export function useProducts() {
       setLoading(false)
       setError(error.message)
     }
-
-    useEffect(() => {
-      fetchProducts()
-    }, [])
   }
+
+  useEffect(() => {
+    fetchProducts()
+  }, [])
 
   return {products, error, loading}
 }
