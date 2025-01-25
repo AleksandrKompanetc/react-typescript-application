@@ -2,7 +2,7 @@ export function Modal({ children }) {
   return (
     <>
       <div className="modal" />
-      <div>
+      <div className="modal-window">
         {children}
       </div>
     </>

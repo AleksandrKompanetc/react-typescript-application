@@ -15,7 +15,9 @@ function App() {
         {error && <ErrorMessage error={error} />}
         {products.map(product => <Product key={product.id} product={product} />)}
 
-        <Modal />
+        <Modal>
+          <p>Modal Window</p>
+        </Modal>
       </div>
     )
 }
