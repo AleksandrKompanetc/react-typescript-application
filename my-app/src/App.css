@@ -74,3 +74,13 @@
 .active {
   background-color: rgb(189, 189, 31);
 }
+
+.modal {
+  position: fixed;
+  background-color: rgb(172, 168, 168);
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
