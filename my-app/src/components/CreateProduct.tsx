@@ -14,7 +14,11 @@ const productData: IProduct = {
   }
 }
 
-export function CreateProduct() {
+interface CreateProductProps {
+  onCreate: () => void
+}
+
+export function CreateProduct({ onCreate }: CreateProductProps) {
   const [value, setValue] = useState('')
   const [error, setError] = useState('')
 
