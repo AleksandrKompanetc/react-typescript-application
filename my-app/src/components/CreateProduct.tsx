@@ -33,7 +33,9 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
 
     productData.title = value
 
-    const response = await axios.post<IProduct>('https://fakestoreapi.com/products')
+    const response = await axios.post<IProduct>('https://fakestoreapi.com/products', productData)
+
+    onCreate()
   }
 
   const changeHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
