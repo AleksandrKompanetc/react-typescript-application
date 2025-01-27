@@ -4,11 +4,14 @@ import { Loader } from './components/Loader'
 import { ErrorMessage } from './components/ErrorMessage'
 import { Modal } from './components/Modal'
 import { CreateProduct } from './components/CreateProduct'
+import { useState } from 'react'
 import './App.css'
+
 
 
 function App() {
   const {loading, products, error} = useProducts()
+  const [modal, setModal] = useState(true)
 
     return (
       <div className='container'>
