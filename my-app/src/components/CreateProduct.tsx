@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { IProduct } from '../models'
+import { ErrorMessage } from './ErrorMessage'
 import axios from 'axios'
+
 
 const productData: IProduct = {
   title: 'test product',
@@ -20,6 +22,7 @@ export function CreateProduct() {
 
   const submitHandler = async (event: React.FormEvent) => {
     event.preventDefault()
+    setError('')
 
     if (value.trim().length === 0) {
       setError('Please, enter valid title.')
@@ -44,6 +47,8 @@ export function CreateProduct() {
         value={value}
         onChange={changeHandler}
       />
+
+      {error && <ErrorMessage error={error} />}
 
       <button 
         type='submit'
