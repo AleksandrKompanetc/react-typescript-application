@@ -20,7 +20,7 @@ function App() {
         {products.map(product => <Product key={product.id} product={product} />)}
 
         {modal && <Modal title='Create new product'>
-          <CreateProduct onCreate={() => setModal(false)} />
+          <CreateProduct />
         </Modal>}
       </div>
     )
