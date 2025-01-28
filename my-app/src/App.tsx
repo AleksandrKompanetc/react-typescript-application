@@ -5,13 +5,19 @@ import { ErrorMessage } from './components/ErrorMessage'
 import { Modal } from './components/Modal'
 import { CreateProduct } from './components/CreateProduct'
 import { useState } from 'react'
+import { IProduct } from './models'
 import './App.css'
+
 
 
 
 function App() {
   const {loading, products, error} = useProducts()
   const [modal, setModal] = useState(true)
+
+  const createHandler = (product: IProduct) => {
+    setModal(false)
+  }
 
     return (
       <div className='container'>
@@ -20,7 +26,7 @@ function App() {
         {products.map(product => <Product key={product.id} product={product} />)}
 
         {modal && <Modal title='Create new product'>
-          <CreateProduct />
+          <CreateProduct onCreate={createHandler} />
         </Modal>}
       </div>
     )
