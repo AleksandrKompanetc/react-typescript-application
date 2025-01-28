@@ -8,15 +8,13 @@ import { useState } from 'react'
 import { IProduct } from './models'
 import './App.css'
 
-
-
-
 function App() {
-  const {loading, products, error} = useProducts()
+  const {loading, products, error, addProduct} = useProducts()
   const [modal, setModal] = useState(true)
 
   const createHandler = (product: IProduct) => {
     setModal(false)
+    addProduct(product)
   }
 
     return (
