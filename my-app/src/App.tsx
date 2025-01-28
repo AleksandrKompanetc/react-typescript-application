@@ -27,7 +27,12 @@ function App() {
           <CreateProduct onCreate={createHandler} />
         </Modal>}
 
-        <button className='add-product-button'></button>
+        <button
+          onClick={() => setModal(true)} 
+          className='add-product-button'
+        >
+          +
+        </button>
       </div>
     )
 }
