@@ -113,3 +113,13 @@
 .create-button:hover {
   color: white;
 }
+
+.add-product-button {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  background-color: rgb(212, 85, 85);
+  color: white;
+  font-size: large;
+}
