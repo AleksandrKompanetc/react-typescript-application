@@ -23,7 +23,7 @@ function App() {
         {error && <ErrorMessage error={error} />}
         {products.map(product => <Product key={product.id} product={product} />)}
 
-        {modal && <Modal title='Create new product'>
+        {modal && <Modal title='Create new product' onClose={() => setModal(false)}>
           <CreateProduct onCreate={createHandler} />
         </Modal>}
       </div>
