@@ -1,8 +1,12 @@
 import React from 'react'
 
+const submitHandler = (event) => {
+  event.preventDefault()
+}
+
 export function CreateProduct() {
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <input 
         type="text" 
         className='create-input'
