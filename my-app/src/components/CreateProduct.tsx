@@ -21,7 +21,10 @@ export function CreateProduct() {
   const submitHandler = async (event: React.FormEvent) => {
     event.preventDefault()
 
-    
+    if (value.trim().length === 0) {
+      setError('Please, enter valid title.')
+      return
+    }
 
     productData.title = value
 
