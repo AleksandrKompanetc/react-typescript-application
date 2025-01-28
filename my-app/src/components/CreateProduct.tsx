@@ -16,9 +16,12 @@ const productData: IProduct = {
 
 export function CreateProduct() {
   const [value, setValue] = useState('')
+  const [error, setError] = useState('')
 
   const submitHandler = async (event: React.FormEvent) => {
     event.preventDefault()
+
+    
 
     productData.title = value
 
